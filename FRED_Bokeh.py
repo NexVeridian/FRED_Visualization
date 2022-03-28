@@ -3,9 +3,9 @@ from itertools import cycle
 
 import bokeh
 import pandas as pd
-from bokeh.io import curdoc, show
+from bokeh.io import curdoc, export_png, show
 from bokeh.layouts import column, grid
-from bokeh.models import DateRangeSlider, tools, Span
+from bokeh.models import DateRangeSlider, Span, tools
 from bokeh.models.sources import ColumnDataSource
 from bokeh.palettes import Dark2_8 as palette
 from bokeh.plotting import figure
@@ -67,10 +67,18 @@ def chartFRED(df: pd.DataFrame) -> bokeh.layouts.layout:
         [
             column(
                 [Date_Range_Slider],
+                # width=600,
+                # height=50,
                 sizing_mode="stretch_width",
             ),
-            [p1],
+            column(
+                [p1],
+                # width=600,
+                # height=625,
+                sizing_mode="stretch_width",
+            ),
         ],
         sizing_mode="stretch_both",
     )
+    # export_png(layout, filename="chartFRED.png")
     return layout
