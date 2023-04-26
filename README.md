@@ -3,6 +3,6 @@ Retrieves CPI data from the Federal Reserve (FRED) using Http Requests and Panda
 For CPI, Core CPI, and Stick CPI, Includes data labels on hover and a movable date slider
 
 # Usage
-open https://NexVeridian.com/fred
+open https://NexVeridian.com/FRED
 
 ![chartFRED](https://github.com/NexVeridian/FRED_Visualization/blob/main/chartFRED.png?raw=true)
